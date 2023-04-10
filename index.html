@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Форма регистрации</title>
+  </head>
+  <body class="page">
+    <section class="registration">
+      <div class="registration__container">
+        <h1 class="registration__title">Форма регистрации для менторов и&nbsp;экспертов Яндекс Практикума</h1>
+        <div class="registration__intro">
+          <p class="registration__welcome">Привет!</p>
+          <p class="registration__terms">Для того чтобы мы запустили процесс нашего сотрудничества, и ты мог брать в работу заявки на консультацию, тебе нужно заполнить данную форму.</p>
+          <p class="registration__brief">Она включает в себя два блока:</p>
+          <ol class="registration__blocks list">
+            <li class="registration__blocks-item">Блок с информацией о тебе для пользователей. Эта информация будет отображаться на нашем сайте.</li>
+            <li class="registration__blocks-item">Блок с информацией необходимой для твоего оформления в Яндекс Практикум.</li>
+          </ol>
+        </div>
+        <form class="registration__form form form_type_registration" name="registration-form" novalidate>
+          <fieldset class="form__content">
+            <legend class="form__legend">Блок с информацией для&nbsp;сайта:</legend>
+            <ul class="form__list list" role="none">
+              <li class="form__item form__item_type_surname">
+                <label class="form__label" for="surname">Фамилия<span class="span-accent">*</span></label>
+                <input
+                  class="form__input"
+                  type="text"
+                  name="surname"
+                  id="surname"
+                  placeholder=""
+                  required
+                >
+                <span class="form__input-error" id="surname-error"></span>
+              </li>
+              <li class="form__item form__item_type_name">
+                <label class="form__label" for="name">Имя<span class="span-accent">*</span></label>
+                <input
+                  class="form__input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder=""
+                  required
+                >
+                <span class="form__input-error" id="name-error"></span>
+              </li>
+              <li class="form__item form__item_type_middle-name">
+                <label class="form__label" for="middle-name">Отчетство<span class="span-accent">*</span></label>
+                <input
+                  class="form__input"
+                  type="text"
+                  name="middle-name"
+                  id="middle-name"
+                  placeholder=""
+                  required
+                >
+                <span class="form__input-error" id="middle-name-error"></span>
+              </li>
+              <li class="form__item form__item_type_job">
+                <label class="form__label" for="job">Твоя текущая должность<span class="span-accent">*</span></label>
+                <input
+                  class="form__input"
+                  type="text"
+                  name="job"
+                  id="job"
+                  placeholder=""
+                  required
+                >
+                <span class="form__input-error" id="job-error"></span>
+              </li>
+              <li class="form__item form__item_type_about">
+                <label class="form__label" for="about">Расскажи подробнее о себе</label>
+                <textarea
+                  class="form__input"
+                  rows="4"
+                  name="about"
+                  id="about"
+                  placeholder=""
+                ></textarea>
+                <span class="form__input-error" id="about-error"></span>
+              </li>
+              <li class="form__item form__item_type_experience">
+                <label class="form__label" for="experience">Опиши свой опыт работы<span class="span-accent">*</span></label>
+                <textarea
+                  class="form__input"
+                  rows="4"
+                  name="experience"
+                  id="experience"
+                  placeholder=""
+                ></textarea>
+                <span class="form__input-error" id="experience-error"></span>
+              </li>
+              <li class="form__item form__item_type_description">
+                <label class="form__label" for="description">Напиши буллитами, с какими запросами ты работаешь<span class="span-accent">*</span></label>
+                <textarea
+                  class="form__input"
+                  rows="4"
+                  name="description"
+                  id="description"
+                  placeholder=""
+                ></textarea>
+                <span class="form__input-error" id="description-error"></span>
+              </li>
+              <li class="form__item form__item_type_photo">
+                <label class="form__label" for="photo">Прикрепи своё фото<span class="span-accent">*</span></label>
+                <input
+                  class="form__input"
+                  type="file"
+                  name="photo"
+                  id="photo"
+                  placeholder=""
+                  required
+                >
+                <span class="form__input-error" id="photo-error"></span>
+              </li>
+              <li class="form__item form__item_type_select accordeon multiselect">
+                <label class="form__label" for="grade">С какими грейдами специалистов ты можешь работать<span class="span-accent">*</span></label>
+                <div class="form__input accordeon__button multiselect__button" type="button" id="grade">Например, Intern и Junior...</div>
+                <div class="accordeon__content">
+                  <div class="checkbox multiselect-container">
+                    <label class="checkbox__label" for="intern">
+                      <input type="checkbox" class="checkbox__input" id="intern" name="grade" value="Intern">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Intern
+                    </label>
+                    <label class="checkbox__label" for="junior">
+                      <input type="checkbox" class="checkbox__input" id="junior" name="grade" value="Junior">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Junior
+                    </label>
+                    <label class="checkbox__label" for="middle">
+                      <input type="checkbox" class="checkbox__input" id="middle" name="grade" value="Middle">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Middle
+                    </label>
+                    <label class="checkbox__label" for="senior">
+                      <input type="checkbox" class="checkbox__input" id="senior" name="grade" value="Senior">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Senior
+                    </label>
+                  </div>
+                </div>
+                <span class="form__input-error" id="grade-error"></span>
+              </li>
+              <li class="form__item form__item_type_skills multiselect">
+                <label class="form__label" for="skills">Выбери несколько базовых навыков, которыми ты владеешь и которые важны в твоей работе<span class="span-accent">*</span></label>
+                <div
+                  class="form__input multiselect__button"
+                  rows="4"
+                  name="skills"
+                  id="skills"
+                  placeholder=""
+                ></div>
+                <div class="checkbox checkbox-container">
+                  <label class="checkbox__label checkbox__label_type_button" for="cv-review">
+                    <input type="checkbox" class="checkbox__input" id="cv-review" name="skills" value="Ревью резюме">
+                    <span class="checkbox__switch checkbox__switch_type_button"></span>
+                    Ревью резюме
+                  </label>
+                  <label class="checkbox__label checkbox__label_type_button" for="planning">
+                    <input type="checkbox" class="checkbox__input" id="planning" name="skills" value="Планирование">
+                    <span class="checkbox__switch checkbox__switch_type_button"></span>
+                    Планирование
+                  </label>
+                  <label class="checkbox__label checkbox__label_type_button" for="interviewing">
+                    <input type="checkbox" class="checkbox__input" id="interviewing" name="skills" value="Проведение собеседований">
+                    <span class="checkbox__switch checkbox__switch_type_button"></span>
+                    Проведение собеседований
+                  </label>
+                  <label class="checkbox__label checkbox__label_type_button" for="project-management">
+                    <input type="checkbox" class="checkbox__input" id="project-management" name="skills" value="Управление проектом">
+                    <span class="checkbox__switch checkbox__switch_type_button"></span>
+                    Управление проектом
+                  </label>
+                  <label class="checkbox__label checkbox__label_type_button" for="public-speaking">
+                    <input type="checkbox" class="checkbox__input" id="public-speaking" name="skills" value="Публичные выступления">
+                    <span class="checkbox__switch checkbox__switch_type_button"></span>
+                    Публичные выступления
+                  </label>
+                </div>
+                <span class="form__input-error" id="skills-error"></span>
+              </li>
+              <li class="form__item form__item_type_select accordeon multiselect">
+                <label class="form__label" for="specializations">Выбери свою специализацию из предложенных вариантов<span class="span-accent">*</span></label>
+                <div class="form__input accordeon__button multiselect__button" type="button" id="specializations">Например, HR</div>
+                <div class="accordeon__content">
+                  <div class="checkbox multiselect-container">
+                    <label class="checkbox__label" for="HR">
+                      <input type="checkbox" class="checkbox__input" id="HR" name="specializations" value="HR">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      HR
+                    </label>
+                    <label class="checkbox__label" for="Аналитика">
+                      <input type="checkbox" class="checkbox__input" id="Аналитика" name="specializations" value="Аналитика">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Аналитика
+                    </label>
+                    <label class="checkbox__label" for="Бэкенд разработка">
+                      <input type="checkbox" class="checkbox__input" id="Бэкенд разработка" name="specializations" value="Бэкенд разработка">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Бэкенд разработка
+                    </label>
+                    <label class="checkbox__label" for="Веб-дизайн">
+                      <input type="checkbox" class="checkbox__input" id="Веб-дизайн" name="specializations" value="Веб-дизайн">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Веб-дизайн
+                    </label>
+                  </div>
+                </div>
+                <span class="form__input-error" id="specializations-error"></span>
+              </li>
+              <li class="form__item form__item_type_select accordeon multiselect">
+                <label class="form__label" for="company-spheres">Выбери сферы компаний, в которых ты работал(а)<span class="span-accent">*</span></label>
+                <div class="form__input accordeon__button multiselect__button" type="button" id="company-spheres">Например, FoodTech</div>
+                <div class="accordeon__content">
+                  <div class="checkbox multiselect-container">
+                    <label class="checkbox__label" for="ArtTech">
+                      <input type="checkbox" class="checkbox__input" id="ArtTech" name="company-spheres" value="ArtTech">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      ArtTech
+                    </label>
+                    <label class="checkbox__label" for="ArtTECH">
+                      <input type="checkbox" class="checkbox__input" id="ArtTECH" name="company-spheres" value="ArtTECH">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      ArtTECH
+                    </label>
+                    <label class="checkbox__label" for="E-com">
+                      <input type="checkbox" class="checkbox__input" id="E-com" name="company-spheres" value="E-com">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      E-com
+                    </label>
+                    <label class="checkbox__label" for="EdTech">
+                      <input type="checkbox" class="checkbox__input" id="EdTech" name="company-spheres" value="EdTech">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      EdTech
+                    </label>
+                  </div>
+                </div>
+                <span class="form__input-error" id="company-spheres-error"></span>
+              </li>
+              <li class="form__item form__item_type_description">
+                <label class="form__label" for="companies">Перечисли названия компаний, в которых ты работал</label>
+                <textarea
+                  class="form__input"
+                  rows="4"
+                  name="companies"
+                  id="companies"
+                  placeholder=""
+                ></textarea>
+                <span class="form__input-error" id="companies-error"></span>
+              </li>
+
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__content">
+            <legend class="form__legend">Блок с информацией для&nbsp;оформления:</legend>
+            <ul class="form__list form__list_type_yandex list" role="none">
+              <li class="form__item form__item_type_email">
+                <label class="form__label" for="email">Личная почта <span class="span-accent">*</span></label>
+                <input
+                  class="form__input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="mntr1@yandex.com"
+                  required
+                >
+                <span class="form__input-error" id="email-error"></span>
+              </li>
+              <li class="form__item form__item_type_phone">
+                <label class="form__label" for="phone">Номер телефона <span class="span-accent">*</span></label>
+                <input
+                  class="form__input"
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="+7 (000) 000-00-00"
+                >
+                <span class="form__input-error" id="phone-error"></span>
+              </li>
+              <li class="form__item form__item_type_telegram">
+                <label class="form__label" for="telegram">Ник в телеграме <span class="span-accent">*</span></label>
+                <input
+                  class="form__input"
+                  type="text"
+                  name="telegram"
+                  id="telegram"
+                  placeholder="@"
+                  required
+                >
+                <span class="form__input-error" id="telegram-error"></span>
+              </li>
+              <li class="form__item form__item_type_name-en">
+                <label class="form__label" for="name-en">Name (Ваше имя на английском языке) <span class="span-accent">*</span></label>
+                <input
+                  class="form__input"
+                  type="text"
+                  name="name-en"
+                  id="name-en"
+                  placeholder="Например, Pavel"
+                  required
+                >
+                <span class="form__input-error" id="name-en-error"></span>
+              </li>
+              <li class="form__item form__item_type_surname-en">
+                <label class="form__label" for="surname-en">Surname (Ваша фамилия на английском языке) <span class="span-accent">*</span></label>
+                <input
+                  class="form__input"
+                  type="text"
+                  name="surname-en"
+                  id="surname-en"
+                  placeholder="Например, Ivanov"
+                  required
+                >
+                <span class="form__input-error" id="surname-en-error"></span>
+              </li>
+              <li class="form__item form__item_type_select form__item_type_country accordeon multiselect">
+                <label class="form__label" for="country">Страна проживания<span class="span-accent">*</span></label>
+                <div class="form__input accordeon__button multiselect__button" type="button" id="country">Где вы сейчас проживаете</div>
+                <div class="accordeon__content">
+                  <div class="checkbox multiselect-container">
+                    <label class="checkbox__label" for="Afghanistan">
+                      <input type="radio" class="checkbox__input" id="Afghanistan" name="country" value="Afghanistan">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Afghanistan
+                    </label>
+                    <label class="checkbox__label" for="Åland Islands">
+                      <input type="radio" class="checkbox__input" id="Åland Islands" name="country" value="Åland Islands">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Åland Islands
+                    </label>
+                    <label class="checkbox__label" for="Albania">
+                      <input type="radio" class="checkbox__input" id="Albania" name="country" value="Albania">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Albania
+                    </label>
+                    <label class="checkbox__label" for="Algeria">
+                      <input type="radio" class="checkbox__input" id="Algeria" name="country" value="Algeria">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Algeria
+                    </label>
+                  </div>
+                </div>
+                <span class="form__input-error" id="country-error"></span>
+              </li>
+              <li class="form__item form__item_type_city">
+                <label class="form__label" for="city">Город проживания <span class="span-accent">*</span></label>
+                <input
+                  class="form__input"
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder=""
+                  required
+                >
+                <span class="form__input-error" id="city-error"></span>
+              </li>
+              <li class="form__item form__item_type_select form__item_type_country accordeon multiselect">
+                <label class="form__label" for="citizenship">Гражданство<span class="span-accent">*</span></label>
+                <div class="form__input accordeon__button multiselect__button" type="button" id="citizenship"></div>
+                <div class="accordeon__content">
+                  <div class="checkbox multiselect-container">
+                    <label class="checkbox__label" for="Afghanistan-cz">
+                      <input type="checkbox" class="checkbox__input" id="Afghanistan-cz" name="citizenship" value="Afghanistan">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Afghanistan
+                    </label>
+                    <label class="checkbox__label" for="Åland Islands-cz">
+                      <input type="checkbox" class="checkbox__input" id="Åland Islands-cz" name="citizenship" value="Åland Islands">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Åland Islands
+                    </label>
+                    <label class="checkbox__label" for="Albania-cz">
+                      <input type="checkbox" class="checkbox__input" id="Albania-cz" name="citizenship" value="Albania">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Albania
+                    </label>
+                    <label class="checkbox__label" for="Algeria-cz">
+                      <input type="checkbox" class="checkbox__input" id="Algeria-cz" name="citizenship" value="Algeria">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Algeria
+                    </label>
+                  </div>
+                </div>
+                <span class="form__input-error" id="citizenship-error"></span>
+              </li>
+              <li class="form__item form__item_type_select form__item_type_country accordeon multiselect">
+                <label class="form__label" for="tax_residency">Налоговое резиденство<span class="span-accent">*</span></label>
+                <div class="form__input accordeon__button multiselect__button" type="button" id="tax_residency">Страна налогового резиденства</div>
+                <div class="accordeon__content">
+                  <div class="checkbox multiselect-container">
+                    <label class="checkbox__label" for="Afghanistan-tr">
+                      <input type="radio" class="checkbox__input" id="Afghanistan-tr" name="tax_residency" value="Afghanistan">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Afghanistan
+                    </label>
+                    <label class="checkbox__label" for="Åland Islands-tr">
+                      <input type="radio" class="checkbox__input" id="Åland Islands-tr" name="tax_residency" value="Åland Islands">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Åland Islands
+                    </label>
+                    <label class="checkbox__label" for="Albania-tr">
+                      <input type="radio" class="checkbox__input" id="Albania-tr" name="tax_residency" value="Albania">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Albania
+                    </label>
+                    <label class="checkbox__label" for="Algeria-tr">
+                      <input type="radio" class="checkbox__input" id="Algeria-tr" name="tax_residency" value="Algeria">
+                      <span class="checkbox__switch checkbox__switch_type_tick"></span>
+                      Algeria
+                    </label>
+                  </div>
+                </div>
+                <span class="form__input-error" id="tax_residency-error"></span>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button button_type_submit button-text" type="submit">Отправить</button>
+        </form>
+        <div class="registration__final">
+          <p class="registration__text">Спасибо за предоставленную информацию!</p>
+          <p class="registration__text">Мы все проверим и вернемся к тебе со статусом твоей заявки.</p>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
