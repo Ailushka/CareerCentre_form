@@ -145,6 +145,23 @@
                 </div>
                 <span class="form__input-error" id="grade-error"></span>
               </li>
+
+              <li class="form__item form__item_type_search accordeon multiselect">
+                <label class="form__label" for="skills_search">Напиши несколько базовых навыков, которыми ты владеешь и которые важны в твоей работе<span class="span-accent">*</span></label>
+                <input
+                  class="form__input accordeon__button multiselect__button"
+                  type="search"
+                  id="skills_search"
+                >
+                <div class="accordeon__content">
+                  <ul class="checkbox multiselect-container multiselect-container_type_search list">
+
+                  </ul>
+                </div>
+                <span class="form__input-error" id="grade-error"></span>
+              </li>
+
+
               <li class="form__item form__item_type_skills multiselect">
                 <label class="form__label" for="skills">Выбери несколько базовых навыков, которыми ты владеешь и которые важны в твоей работе<span class="span-accent">*</span></label>
                 <div
@@ -319,33 +336,39 @@
                 <span class="form__input-error" id="surname-en-error"></span>
               </li>
               <li class="form__item form__item_type_select form__item_type_country accordeon multiselect">
-                <label class="form__label" for="country">Страна проживания<span class="span-accent">*</span></label>
+                <label class="form__label" for="country">Страна проживания с поиском<span class="span-accent">*</span></label>
                 <div class="form__input accordeon__button multiselect__button" type="button" id="country">Где вы сейчас проживаете</div>
                 <div class="accordeon__content">
-                  <div class="checkbox multiselect-container">
-                    <label class="checkbox__label" for="Afghanistan">
-                      <input type="radio" class="checkbox__input" id="Afghanistan" name="country" value="Afghanistan">
+                  <div class="checkbox multiselect-container" id="myDropdown">
+                    <input class="form__input accordeon__search-button" type="text" placeholder="Search.." id="myInput">
+                    <label class="checkbox__label" for="Афганистан">
+                      <input type="radio" class="checkbox__input" id="Афганистан" name="country" value="Афганистан">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Afghanistan
+                      Афганистан
                     </label>
-                    <label class="checkbox__label" for="Åland Islands">
-                      <input type="radio" class="checkbox__input" id="Åland Islands" name="country" value="Åland Islands">
+                    <label class="checkbox__label" for="Аландские острова">
+                      <input type="radio" class="checkbox__input" id="Аландские острова" name="country" value="Аландские острова">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Åland Islands
+                      Аландские острова
                     </label>
-                    <label class="checkbox__label" for="Albania">
-                      <input type="radio" class="checkbox__input" id="Albania" name="country" value="Albania">
+                    <label class="checkbox__label" for="Албания">
+                      <input type="radio" class="checkbox__input" id="Албания" name="country" value="Албания">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Albania
+                      Албания
                     </label>
-                    <label class="checkbox__label" for="Algeria">
-                      <input type="radio" class="checkbox__input" id="Algeria" name="country" value="Algeria">
+                    <label class="checkbox__label" for="Алжир">
+                      <input type="radio" class="checkbox__input" id="Алжир" name="country" value="Алжир">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Algeria
+                      Алжир
                     </label>
                   </div>
                 </div>
                 <span class="form__input-error" id="country-error"></span>
+              </li>
+              <li class="form__item form__item_type_select form__item_type_country autocomplete">
+                <label class="form__label" for="country-autocomplete">Страна проживания с автозаполнением<span class="span-accent">*</span></label>
+                <input class="form__input" id="country-autocomplete" placeholder="Где вы сейчас проживаете">
+                <span class="form__input-error" id="country-autocomplete-error"></span>
               </li>
               <li class="form__item form__item_type_city">
                 <label class="form__label" for="city">Город проживания <span class="span-accent">*</span></label>
@@ -356,6 +379,7 @@
                   id="city"
                   placeholder=""
                   required
+                  disabled
                 >
                 <span class="form__input-error" id="city-error"></span>
               </li>
@@ -364,25 +388,25 @@
                 <div class="form__input accordeon__button multiselect__button" type="button" id="citizenship"></div>
                 <div class="accordeon__content">
                   <div class="checkbox multiselect-container">
-                    <label class="checkbox__label" for="Afghanistan-cz">
-                      <input type="checkbox" class="checkbox__input" id="Afghanistan-cz" name="citizenship" value="Afghanistan">
+                    <label class="checkbox__label" for="Афганистан-cz">
+                      <input type="checkbox" class="checkbox__input" id="Афганистан-cz" name="citizenship" value="Афганистан">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Afghanistan
+                      Афганистан
                     </label>
-                    <label class="checkbox__label" for="Åland Islands-cz">
-                      <input type="checkbox" class="checkbox__input" id="Åland Islands-cz" name="citizenship" value="Åland Islands">
+                    <label class="checkbox__label" for="Аландские острова-cz">
+                      <input type="checkbox" class="checkbox__input" id="Аландские острова-cz" name="citizenship" value="Аландские острова">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Åland Islands
+                      Аландские острова
                     </label>
-                    <label class="checkbox__label" for="Albania-cz">
-                      <input type="checkbox" class="checkbox__input" id="Albania-cz" name="citizenship" value="Albania">
+                    <label class="checkbox__label" for="Албания-cz">
+                      <input type="checkbox" class="checkbox__input" id="Албания-cz" name="citizenship" value="Албания">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Albania
+                      Албания
                     </label>
-                    <label class="checkbox__label" for="Algeria-cz">
-                      <input type="checkbox" class="checkbox__input" id="Algeria-cz" name="citizenship" value="Algeria">
+                    <label class="checkbox__label" for="Алжир-cz">
+                      <input type="checkbox" class="checkbox__input" id="Алжир-cz" name="citizenship" value="Алжир">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Algeria
+                      Алжир
                     </label>
                   </div>
                 </div>
@@ -393,25 +417,25 @@
                 <div class="form__input accordeon__button multiselect__button" type="button" id="tax_residency">Страна налогового резиденства</div>
                 <div class="accordeon__content">
                   <div class="checkbox multiselect-container">
-                    <label class="checkbox__label" for="Afghanistan-tr">
-                      <input type="radio" class="checkbox__input" id="Afghanistan-tr" name="tax_residency" value="Afghanistan">
+                    <label class="checkbox__label" for="Афганистан-tr">
+                      <input type="radio" class="checkbox__input" id="Афганистан-tr" name="tax_residency" value="Афганистан">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Afghanistan
+                      Афганистан
                     </label>
-                    <label class="checkbox__label" for="Åland Islands-tr">
-                      <input type="radio" class="checkbox__input" id="Åland Islands-tr" name="tax_residency" value="Åland Islands">
+                    <label class="checkbox__label" for="Аландские острова-tr">
+                      <input type="radio" class="checkbox__input" id="Аландские острова-tr" name="tax_residency" value="Аландские острова">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Åland Islands
+                      Аландские острова
                     </label>
-                    <label class="checkbox__label" for="Albania-tr">
-                      <input type="radio" class="checkbox__input" id="Albania-tr" name="tax_residency" value="Albania">
+                    <label class="checkbox__label" for="Албания-tr">
+                      <input type="radio" class="checkbox__input" id="Албания-tr" name="tax_residency" value="Албания">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Albania
+                      Албания
                     </label>
-                    <label class="checkbox__label" for="Algeria-tr">
-                      <input type="radio" class="checkbox__input" id="Algeria-tr" name="tax_residency" value="Algeria">
+                    <label class="checkbox__label" for="Алжир-tr">
+                      <input type="radio" class="checkbox__input" id="Алжир-tr" name="tax_residency" value="Алжир">
                       <span class="checkbox__switch checkbox__switch_type_tick"></span>
-                      Algeria
+                      Алжир
                     </label>
                   </div>
                 </div>
@@ -427,6 +451,18 @@
         </div>
       </div>
     </section>
+
+    <template class="template_type_checkbox-item">
+      <li class="checkbox__item">
+        <label class="checkbox__label" for="">
+          <input class="checkbox__input" type="checkbox" id="" name="" value="">
+          <span class="checkbox__switch checkbox__switch_type_tick"></span>
+        </label>
+      </li>
+    </template>
+
+    <script type="text/javascript" src="./constants.js"></script>
+    <script type="text/javascript" src="./countries.js"></script>
     <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>

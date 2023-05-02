@@ -162,8 +162,8 @@
   box-sizing: border-box;
 }
 
-.form__input:hover,
-.form__input:active,
+.form__input:not([disabled]):hover,
+.form__input:not([disabled]):active,
 .form__item:has(.accordeon__button_active) .form__input {
   border-color: #262626;
 }
@@ -244,6 +244,10 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height .5s ease-in-out;
+}
+
+.form__item_type_search .accordeon__content {
+  width: 100%;
 }
 
 .form__item_type_country .accordeon__content {
